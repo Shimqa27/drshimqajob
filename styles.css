@@ -372,12 +372,19 @@ audio::-webkit-media-controls-panel {
 }
 @media (max-width: 768px) {
   body {
-    overflow-y: auto;
-    height: auto;
-    min-height: 100vh;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    position: relative !important;
   }
   
   .cinema-frame {
-    margin-bottom: 50px;
+    margin-bottom: 80px !important;
+  }
+  
+  html {
+    overflow: hidden !important;
+    height: 100% !important;
   }
 }
