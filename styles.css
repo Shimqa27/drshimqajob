@@ -42,7 +42,16 @@ body {
   animation: starsMove 100s linear infinite;
   z-index: -2;
 }
-
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
 .twinkling {
   position: fixed;
   top: 0;
@@ -359,5 +368,16 @@ audio::-webkit-media-controls-panel {
   
   .cinema-frame {
     padding: 30px 20px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .cinema-frame {
+    margin-bottom: 50px;
   }
 }
